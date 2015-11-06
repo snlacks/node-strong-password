@@ -18,16 +18,10 @@ name - patterned after the function name.
 
 If a password fails spw.isLongEnough(), the object would look like this.
 
-	{
-		name: "length",
-		message: `The password needs to be 8 characters long.`,
-		pattern: 8
-	}
+    {
+        name: "length",
+        message: `The password needs to be 8 characters long.`,
+        pattern: 8
+    }
 
-If you want to change the minimum length, you can pass that in the options.
-
-Class/Static Variables for patterns can be set. THe naming convention is to .isValidMethod.pattern
-
-## Work flow.
-
-Include the class, 
+If you want to change the minimum length, you can pass that in the options. (minLength) See the full documentation below for complete API.
