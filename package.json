@@ -1,0 +1,17 @@
+{
+  "name": "validate-password",
+  "version": "0.1.0",
+  "description": "Assures the quality of passwords",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/ test"
+  },
+  "author": "Steven Lacks <snlacks@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "chai": "^3.4.0"
+  }
+}
