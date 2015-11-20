@@ -1,27 +1,25 @@
 # Validate Password
+[![Build Status](https://travis-ci.org/snlacks/node-strong-password.svg?branch=master)](https://travis-ci.org/snlacks/node-strong-password)
 
-An interface for commonly used password quality assurance.
+Tests for minimum length and complexity with char types.
 
-Works on Server or in Browser.
+These methods can be used with instantiation or functionally.
+## new StrongPassword(password, [option])
+options
+* minLength
 
-## Commonly used patterns.
+## isValid() 
+Validate both length and complexity; only on instantiated passwords. Runs both functions. Returns true or false.
 
-* minimum length
-* minimum variety for types of characters
-* disallow common passwords
+## isLongEnough([password])
+Validates for length, can pass minLength as an option on instantiation or as the second argument.
+No length maximum.
 
-## customizing including patterns, messages, names.
+## isComplexEnough([password])
+Validates for three of the following
+* An uppercase letter
+* A lowercase letter
+* A number
+* A special character
+Allows spaces.
 
-If a password fails the pattern test, two keys are set on an object.
-
-name - patterned after the function name. 
-
-If a password fails spw.isLongEnough(), the object would look like this.
-
-    {
-        name: "length",
-        message: `The password needs to be 8 characters long.`,
-        pattern: 8
-    }
-
-If you want to change the minimum length, you can pass that in the options. (minLength) See the full documentation below for complete API.
