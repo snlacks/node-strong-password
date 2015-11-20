@@ -1,17 +1,19 @@
 {
-  "name": "validate-password",
-  "version": "0.1.0",
+  "name": "node-strong-password",
+  "version": "1.0.0",
   "description": "Assures the quality of passwords",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/mocha/ test"
+    "lint": "node ./node_modules/eslint/bin/eslint.js index.js",
+    "test": "node ./node_modules/mocha/ test",
+    "check": "npm run lint && npm run test"
   },
   "author": "Steven Lacks <snlacks@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "chai": "^3.4.0",
+    "eslint": "^1.9.0",
     "mocha": "^2.3.3"
   },
-  "dependencies": {
-    "chai": "^3.4.0"
-  }
+  "dependencies": {}
 }
